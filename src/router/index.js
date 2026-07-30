@@ -8,6 +8,8 @@ import ForeignApp from '@/pages/ForeignApp.vue'
 import AppleID from '../pages/AppleID.vue'
 import Region from '@/pages/appleidregion.vue'
 import Changeregion from '@/pages/changeregion.vue'
+import Mac from '../pages/Mac.vue'
+import Windows from '@/pages/Windows.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,12 +20,6 @@ const router = createRouter({
       name: 'Iphone',
       component: Device,
       props: { device: 'iPhone' }
-    },
-    {
-      path: '/mac',
-      name: 'Mac',
-      component: Device,
-      props: { device: 'Mac' }
     },
     {
       path: '/windows',
@@ -65,6 +61,17 @@ const router = createRouter({
       path: '/iphone/appleid/changeregion',
       name: 'changeregion',
       component: Changeregion
+    },
+    {
+      path: '/windows',
+      name: 'Windows',
+      component: Windows
+    },
+    {
+      path: '/mac',
+      name: 'Mac',
+      component: Mac,
+      props: { device: 'Mac' }
     }
   ]
 })

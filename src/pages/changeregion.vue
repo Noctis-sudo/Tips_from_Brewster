@@ -15,17 +15,6 @@
           <img src="/resources/iPhone/appleid/appleid-changeregion1.png" alt="region1" />
     </section>
 
-    <section class="step-card">
-      <h2>3. 按照提示输入账户与密码</h2>
-      <h2>⚠️请不要将账户及密码透露给任何人!</h2>
-      <h2>⚠️请不要将双重认证验证码透露给任何人！</h2>
-            <p>美区账户： gulubaoxiao01@gmail.com</p>
-            <p>美区账户密码： Mima114514.</p>
-            <p>国区账户： gulubao01@gmail.com</p>
-            <p>国区账户密码： Mima114514</p>
-            <p>港区账户： gulubaoda01@gmail.com</p>
-            <p>港区账户密码： Mima114514?</p>
-    </section>
   </main>
 </template>
 

@@ -5,17 +5,14 @@
 
     <div class="menu">
       <RouterLink to="/mac" class="category-card">
-        <img src="/resources/Mac/Mac.png" alt="Mac" />
         <span>Mac</span>
       </RouterLink>
 
       <RouterLink to="/iphone" class="category-card">
-        <img src="/resources/iPhone/iPhone.png" alt="iPhone" />
         <span>iPhone</span>
       </RouterLink>
 
       <RouterLink to="/windows" class="category-card">
-        <img src="/resources/Windows/Windows.png" alt="Windows" />
         <span>Windows</span>
       </RouterLink>
     </div>

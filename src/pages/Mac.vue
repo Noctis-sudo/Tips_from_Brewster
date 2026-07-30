@@ -9,40 +9,17 @@
       <input :placeholder="`搜索 ${device} 使用帮助`" />
     </div>
 
-    <section v-if="device === 'iPhone'">
-      <h2>iPhone 帮助</h2>
+    <section v-if="device === 'Mac'">
+      <h2>Mac 帮助</h2>
       <div class="topics">
-        <RouterLink to="/iphone/vpn" class="topic-card">
+        <RouterLink to="/mac/vpn" class="topic-card">
           <div class="topic-icon">
             <img src="/resources/iPhone/VPN.png" alt="VPN" />
           </div>
           <p>VPN</p>
         </RouterLink>
 
-        <RouterLink to="/iphone/appleid" class="topic-card">
-          <div class="topic-icon">
-          <div class="topic-icon" style="font-size: x-large;"></div>
-          </div>
-          <p>Apple ID</p>
-
-        </RouterLink>
-
-
-        <RouterLink to="/iphone/appstore" class="topic-card">
-          <div class="topic-icon">
-            <img src="/resources/iPhone/AppStore.png" alt="App Store" />
-          </div>
-          <p>App Store</p>
-        </RouterLink>
-
       </div>
-    </section>
-
-    <section v-else class="placeholder">
-      <h2>更多内容即将上线</h2>
-      <p>
-        目前 {{ device }} 帮助页面正在准备中。你可以先访问 iPhone 专属帮助页面。
-      </p>
     </section>
   </main>
 </template>
