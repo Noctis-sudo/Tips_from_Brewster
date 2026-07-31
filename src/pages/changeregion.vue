@@ -15,6 +15,10 @@
           <img src="/resources/iPhone/appleid/appleid-changeregion1.png" alt="region1" />
     </section>
 
+    <section class="step-card">
+      <h2>密码详见密码纸</h2>
+    </section>
+
   </main>
 </template>
 
@@ -64,17 +68,6 @@ h1 {
   margin-top: 0;
 }
 
-.image-placeholder {
-  margin: 18px 0;
-  min-height: 180px;
-  border-radius: 18px;
-  background: #e9e9ef;
-  display: grid;
-  place-items: center;
-  color: #666;
-  font-weight: 600;
-}
-
 p {
   line-height: 1.8;
 }
@@ -99,12 +92,6 @@ p {
 
 .article-card:hover {
   transform: translateY(-2px);
-}
-
-.article-card p {
-  margin: 0;
-  font-size: 1rem;
-  text-align: center;
 }
 
 .step-card img {

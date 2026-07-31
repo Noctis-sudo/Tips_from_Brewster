@@ -5,16 +5,25 @@
 
     <div class="menu">
       <RouterLink to="/mac" class="category-card">
+        <img src="/resources/Mac/Mac.png" alt="Mac">
         <span>Mac</span>
       </RouterLink>
 
       <RouterLink to="/iphone" class="category-card">
+        <img src="/resources/iPhone/iPhone.png" alt="iPhone">
         <span>iPhone</span>
       </RouterLink>
 
       <RouterLink to="/windows" class="category-card">
+        <img src="/resources/Windows/Windows.png" alt="Windows">
         <span>Windows</span>
       </RouterLink>
+
+      <RouterLink to="/problem" class="category-card">
+        <img src="/resources/problem/problem.png" alt="Problem">
+        <span>常见问题</span>
+      </RouterLink>
+
     </div>
   </main>
 </template>
@@ -89,6 +98,7 @@ h1 {
   .menu {
     grid-template-columns: 1fr;
   }
+
   .home-page {
     padding: 40px 20px;
   }

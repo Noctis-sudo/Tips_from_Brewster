@@ -3,25 +3,40 @@
     <button type="button" class="back" @click="goBack">← 返回</button>
 
     <h1>如何打开 VPN</h1>
-    <p class="description">这里以后填写教程简介</p>
 
     <section class="step-card">
-      <h2>步骤 1</h2>
-      <div class="image-placeholder">IMAGE_PLACEHOLDER_1</div>
-      <p>这里以后填写步骤说明</p>
+      <h2>1.</h2>
+        <img src="/resources/iPhone/VPN.png" alt="VPN" />
+      <p>双击打开桌面上的VPN图标</p>
     </section>
 
     <section class="step-card">
-      <h2>步骤 2</h2>
-      <div class="image-placeholder">IMAGE_PLACEHOLDER_2</div>
-      <p>这里以后填写步骤说明</p>
+      <h2>2.</h2>
+        <img src="/resources/Windows/vpn/1.png" alt="choice" />
+      <p>选择套餐和目标位置（如图）</p>
+      <p>点击红框位置打开VPN</p>
+      <p>台湾地区可以访问大部分网站（香港略有限制）</p>
+      <p style="color: red;">部分政府网站与银行需要当地IP，更改绿框中的目标位置</p>
     </section>
 
     <section class="step-card">
-      <h2>步骤 3</h2>
-      <div class="image-placeholder">IMAGE_PLACEHOLDER_3</div>
-      <p>这里以后填写步骤说明</p>
+      <h2>3.</h2>
+        <img src="/resources/Windows/vpn/2.png" alt="where?" />
+      <p>打开后软件自动进入系统托盘 单击打开</p>
+      <p style="color: red;">⚠️使用完成后请一定打开托盘关闭VPN后再关闭软件</p>
     </section>
+
+    <section class="step-card">
+      <h2>详见下方视频</h2>
+        <video class="responsive-video" src="/resources/problem/1.mp4" controls playsinline preload="metadata" />
+    </section>
+
+    <section class="step-card">
+        <RouterLink to="/problem/webnaaccess" class="category-card">
+          VPN常见问题请点这里
+        </RouterLink>
+    </section>
+
   </main>
 </template>
 
@@ -71,24 +86,43 @@ h1 {
   margin-top: 0;
 }
 
-.image-placeholder {
-  margin: 18px 0;
-  min-height: 180px;
-  border-radius: 18px;
-  background: #e9e9ef;
-  display: grid;
-  place-items: center;
-  color: #666;
-  font-weight: 600;
-}
-
 p {
   line-height: 1.8;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
   .page {
     padding: 36px 20px;
   }
+  .topics {
+    grid-template-columns: 1fr;
+  }
+}
+.category-card {
+  height: 220px;
+  border: none;
+  border-radius: 28px;
+  background: #f5f5f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 12px 30px rgba(15, 15, 15, 0.05);
+}
+
+.step-card .responsive-video {
+  width: 100%;
+  max-width: 100%;
+  max-height: 60vh;
+  height: auto;
+  display: block;
+  margin: 12px 0 0 0;
+  border-radius: 12px;
+  background: #000;
 }
 </style>

@@ -4,16 +4,7 @@
 
     <h1>{{ device }}</h1>
 
-    <p class="description">
-      {{ device === 'iPhone' ? '查找有关 iPhone 的使用帮助' : `${device} 帮助页面正在准备中` }}
-    </p>
-
-    <div class="search-box">
-      <span class="search-icon">🔍</span>
-      <input :placeholder="`搜索 ${device} 使用帮助`" />
-    </div>
-
-    <section v-if="device === 'iPhone'">
+    <section v-if="device == 'iPhone'">
       <h2>iPhone 帮助</h2>
       <div class="topics">
         <RouterLink to="/iphone/vpn" class="topic-card">
@@ -23,10 +14,10 @@
           <p>VPN</p>
         </RouterLink>
 
-        <div class="topic-card disabled">
-          <div class="topic-icon text-icon"></div>
-          <p>Apple ID</p>
-        </div>
+        <RouterLink to="iphone/appleid" class="topic-card">
+            <div class="topic-icon text-icon"></div>
+            <p>Apple ID</p>
+        </RouterLink>
 
         <RouterLink to="/iphone/appstore" class="topic-card">
           <div class="topic-icon">
@@ -38,12 +29,42 @@
       </div>
     </section>
 
-    <section v-else class="placeholder">
-      <h2>更多内容即将上线</h2>
-      <p>
-        目前 {{ device }} 帮助页面正在准备中。你可以先访问 iPhone 专属帮助页面。
-      </p>
+    <section v-if="device == 'Mac'">
+      <h2>Mac 帮助</h2>
+      <div class="topics">
+        <RouterLink to="/mac/vpn" class="topic-card">
+          <div class="topic-icon">
+            <img src="/resources/iPhone/VPN.png" alt="VPN" />
+          </div>
+          <p>VPN</p>
+        </RouterLink>
+
+      </div>
     </section>
+
+    <section v-if="device == 'Windows'">
+      <h2>Windows 帮助</h2>
+      <div class="topics">
+        <RouterLink to="/windows/vpn" class="topic-card">
+          <div class="topic-icon">
+            <img src="/resources/iPhone/VPN.png" alt="VPN" />
+          </div>
+          <p>VPN</p>
+        </RouterLink>
+
+      </div>
+    </section>
+
+    <section v-if="device == 'Problem'">
+      <h2>常见问题帮助</h2>
+      <div class="topics">
+        <RouterLink to="/problem/webnaaccess" class="article-card">
+          <p>浏览器提示无法访问此网站</p>
+        </RouterLink>
+
+      </div>
+    </section>
+
   </main>
 </template>
 
@@ -83,28 +104,6 @@ h1 {
   color: #666;
   font-size: 1.1rem;
   max-width: 720px;
-}
-
-.search-box {
-  margin-top: 36px;
-  background: #f5f5f7;
-  border-radius: 18px;
-  padding: 18px 20px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.search-icon {
-  font-size: 1.2rem;
-}
-
-.search-box input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  outline: none;
-  font-size: 1rem;
 }
 
 h2 {
@@ -167,10 +166,6 @@ h2 {
   font-size: 1.15rem;
   font-weight: 600;
 }
-.topic-card.disabled {
-  cursor: default;
-  opacity: 0.75;
-}
 
 .placeholder {
   margin-top: 40px;
@@ -197,4 +192,27 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+.article-card {
+  display: block;
+  border-radius: 22px;
+  background: #ffffff;
+  padding: 22px;
+  margin: 16px 0 14px;
+  color: #111;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.16s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+}
+
+.article-card p {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
 </style>

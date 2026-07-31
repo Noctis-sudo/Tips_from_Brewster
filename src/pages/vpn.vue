@@ -3,36 +3,37 @@
     <button type="button" class="back" @click="goBack">← 返回</button>
 
     <h1>VPN</h1>
-    <p class="description">查找 VPN 的使用帮助</p>
+    <h2>VPN 使用帮助</h2>
 
-    <div class="search-box">
-      <span class="search-icon">🔍</span>
-      <input placeholder="搜索 VPN 问题" />
-    </div>
-
-    <section class="topic-list">
-      <h2>VPN 使用帮助</h2>
-
+    <section v-if="device == 'iPhone'">
       <div class="article-card">
-        <RouterLink to="/article/open-vpn" class="article-link">
+        <h2>頁面尚未完成，請先參考Windows頁VPN</h2>
+      </div>
+    </section>
+
+    <section v-if="device=='Windows'">
+      <div class="article-card">
+        <RouterLink to="/windows/vpn/openvpn" class="article-link">
           如何打开 VPN
         </RouterLink>
       </div>
-
-      <div class="article-card disabled">
-        <p>如何关闭 VPN</p>
-      </div>
-
-      <div class="article-card disabled">
-        <p>VPN 无法连接怎么办</p>
-      </div>
     </section>
+
+    <section v-if="device=='Mac'">
+    <div class="article-card">
+        <h2>頁面尚未完成，請先參考Windows頁VPN</h2>
+    </div>
+    </section>
+
   </main>
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router'
 const router = useRouter()
+const props = defineProps({
+  device: { type: String, default: 'iPhone' }
+})
 const goBack = () => router.back()
 </script>
 
@@ -65,35 +66,8 @@ h1 {
   max-width: 720px;
 }
 
-.search-box {
-  margin-top: 36px;
-  background: #f5f5f7;
-  border-radius: 18px;
-  padding: 18px 20px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.search-icon {
-  font-size: 1.2rem;
-}
-
-.search-box input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  outline: none;
-  font-size: 1rem;
-}
-
 .topic-list {
   margin-top: 40px;
-}
-
-.topic-list h2 {
-  margin-bottom: 18px;
-  font-size: 1.4rem;
 }
 
 .article-card {
@@ -117,20 +91,12 @@ h1 {
   font-size: 1rem;
   text-align: center;
 }
+
 .article-link {
   text-decoration: none;
   color: #111;
   font-size: 1.1rem;
   font-weight: 600;
-}
-
-.article-card.disabled {
-  opacity: 0.7;
-}
-
-.article-card.disabled p {
-  margin: 0;
-  color: #666;
 }
 
 @media (max-width: 760px) {

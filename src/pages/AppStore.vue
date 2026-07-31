@@ -3,12 +3,6 @@
     <button type="button" class="back" @click="goBack">← 返回</button>
 
     <h1>App Store</h1>
-    <p class="description">查找 App Store 的使用帮助</p>
-
-    <div class="search-box">
-      <span class="search-icon">🔍</span>
-      <input placeholder="搜索 App Store 问题" />
-    </div>
 
     <section class="topic-list">
       <h2>App Store 使用帮助</h2>
@@ -18,14 +12,6 @@
             下载非中国大陆App
         </RouterLink>
     </div>
-
-      <div class="article-card disabled">
-        <p>在iPhone上获取App</p>
-      </div>
-
-      <div class="article-card disabled">
-        <p>管理订阅与更新</p>
-      </div>
     </section>
   </main>
 </template>
@@ -65,28 +51,6 @@ h1 {
   max-width: 720px;
 }
 
-.search-box {
-  margin-top: 36px;
-  background: #f5f5f7;
-  border-radius: 18px;
-  padding: 18px 20px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.search-icon {
-  font-size: 1.2rem;
-}
-
-.search-box input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  outline: none;
-  font-size: 1rem;
-}
-
 .topic-list {
   margin-top: 40px;
 }
@@ -123,10 +87,6 @@ h1 {
   color: #111;
   font-size: 1.1rem;
   font-weight: 600;
-}
-
-.article-card.disabled {
-  opacity: 0.7;
 }
 
 @media (max-width: 760px) {

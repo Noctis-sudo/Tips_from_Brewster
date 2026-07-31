@@ -1,78 +1,42 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
-import Device from '../pages/iphone.vue'
-import Topic from '../pages/vpn.vue'
-import Article from '../pages/vpn-openvpn.vue'
 import AppStore from '../pages/AppStore.vue'
-import ForeignApp from '@/pages/ForeignApp.vue'
+import ForeignApp from '../pages/ForeignApp.vue'
 import AppleID from '../pages/AppleID.vue'
-import Region from '@/pages/appleidregion.vue'
-import Changeregion from '@/pages/changeregion.vue'
-import Mac from '../pages/Mac.vue'
-import Windows from '@/pages/Windows.vue'
+import Region from '../pages/appleidregion.vue'
+import Changeregion from '../pages/changeregion.vue'
+import Device from '../pages/Device.vue'
+import Vpn from '../pages/vpn.vue'
+import VpnOpen from '../pages/vpn-openvpn.vue'
+import internetProblem from '../pages/internetProblem.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', name: 'Home', component: Home },
-    {
-      path: '/iphone',
-      name: 'Iphone',
-      component: Device,
-      props: { device: 'iPhone' }
-    },
-    {
-      path: '/windows',
-      name: 'Windows',
-      component: Device,
-      props: { device: 'Windows' }
-    },
-    {
-      path: '/iphone/vpn',
-      name: 'IphoneVpn',
-      component: Topic
-    },
-    {
-      path: '/iphone/appstore',
-      name: 'IphoneAppStore',
-      component: AppStore
-    },
-    {
-      path: '/article/open-vpn',
-      name: 'ArticleOpenVPN',
-      component: Article
-    },
-    {
-      path: '/iphone/appstore/foreignapp',
-      name: 'Foreignapp',
-      component: ForeignApp
-    },
-    {
-      path: '/iphone/appleid',
-      name: 'AppleID',
-      component: AppleID
-    },
-    {
-      path: '/iphone/appleid/region',
-      name: 'Region',
-      component: Region
-    },
-    {
-      path: '/iphone/appleid/changeregion',
-      name: 'changeregion',
-      component: Changeregion
-    },
-    {
-      path: '/windows',
-      name: 'Windows',
-      component: Windows
-    },
-    {
-      path: '/mac',
-      name: 'Mac',
-      component: Mac,
-      props: { device: 'Mac' }
-    }
+    
+    { path: '/iphone', name: 'iPhone', component: Device, props: { device: 'iPhone' } },
+    { path: '/windows', name: 'Windows', component: Device, props: { device: 'Windows' } },
+    { path: '/mac', name: 'Mac', component: Device, props: { device: 'Mac' } },
+    { path: '/problem', name: 'Problem', component: Device, props: { device: 'Problem' } },
+
+    { path: '/iphone/vpn', name: 'IphoneVpn', component: Vpn, props: { device: 'iPhone' } },
+    { path: '/windows/vpn', name: 'WindowsVpn', component: Vpn, props: { device: 'Windows' } },
+    { path: '/mac/vpn', name: 'MacVpn', component: Vpn, props: { device: 'Mac' } },
+
+    { path: '/iphone/appstore', name: 'IphoneAppStore', component: AppStore },
+    { path: '/iphone/appstore/foreignapp', name: 'Foreignapp', component: ForeignApp },
+
+    { path: '/iphone/appleid', name: 'AppleID', component: AppleID },
+    { path: '/iphone/appleid/region', name: 'Region', component: Region },
+    { path: '/iphone/appleid/changeregion', name: 'changeregion', component: Changeregion },
+
+    { path: '/windows/vpn/openvpn', name: 'VpnOpen', component: VpnOpen },
+
+    { path: '/problem/webnaaccess', name: 'internetProblem', component: internetProblem },
+
+    // catch-all 404 route
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: Home }
   ]
 })
 

@@ -3,12 +3,6 @@
     <button type="button" class="back" @click="goBack">← 返回</button>
 
     <h1>Apple ID</h1>
-    <p class="description">查找 Apple ID 的使用帮助</p>
-
-    <div class="search-box">
-      <span class="search-icon">🔍</span>
-      <input placeholder="搜索 Apple ID 问题" />
-    </div>
 
     <section class="topic-list">
       <h2>Apple ID 使用帮助</h2>
@@ -24,10 +18,6 @@
           切换Apple ID
         </RouterLink>
     </div>
-
-      <div class="article-card disabled">
-        <p>管理你的Apple ID</p>
-      </div>
     </section>
   </main>
 </template>
@@ -67,28 +57,6 @@ h1 {
   max-width: 720px;
 }
 
-.search-box {
-  margin-top: 36px;
-  background: #f5f5f7;
-  border-radius: 18px;
-  padding: 18px 20px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.search-icon {
-  font-size: 1.2rem;
-}
-
-.search-box input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  outline: none;
-  font-size: 1rem;
-}
-
 .topic-list {
   margin-top: 40px;
 }
@@ -125,10 +93,6 @@ h1 {
   color: #111;
   font-size: 1.1rem;
   font-weight: 600;
-}
-
-.article-card.disabled {
-  opacity: 0.7;
 }
 
 @media (max-width: 760px) {
