@@ -11,6 +11,7 @@ import VpnOpen from '../pages/vpn-openvpn.vue'
 import internetProblem from '../pages/internetProblem.vue'
 import notfound from '../pages/404.vue'
 import Vpnregion from '@/pages/vpnregion.vue'
+import chatgptaccess from '@/pages/chatgptaccess.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,6 +38,7 @@ const router = createRouter({
     { path: '/iphone/vpn/openvpn', name: 'iphonevpnopen', component: VpnOpen, props: { device:'iPhone'} },
 
     { path: '/iphone/vpn/vpnregion', name: 'vpnregion', component: Vpnregion, props: { device:'iPhone'} },
+    { path: '/problem/gpt', name: 'chatgpt', component: chatgptaccess},
 
     { path: '/problem/webnaaccess', name: 'webProblem', component: internetProblem, props: {type: 'web'} },
     { path: '/problem/internetnaaccess', name: 'internetProblem', component: internetProblem, props: {type: 'internet'} },

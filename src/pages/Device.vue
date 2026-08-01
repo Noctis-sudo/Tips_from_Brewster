@@ -64,7 +64,9 @@
         <RouterLink to="/problem/internetnaaccess" class="article-card">
           <p>浏览器提示无法访问Internet</p>
         </RouterLink>
-
+        <RouterLink to="/problem/gpt" class="article-card">
+          <p>我无法访问ChatGPT</p>
+        </RouterLink>
       </div>
     </section>
 

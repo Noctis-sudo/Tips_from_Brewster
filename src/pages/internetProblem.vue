@@ -25,8 +25,10 @@
 
     <section v-else-if="props.type === 'internet'">
       <h1>提示无法访问Internet</h1>
-      <h2>你没有连接以太网（插网线）或个人热点</h2>
-      <h2>Wi-Fi无法被该台式机连接</h2>
+      <section class="step-card">
+        <h2>你没有连接以太网（插网线）/个人热点</h2>
+        <h2>**Wi-Fi无法被该台式机连接</h2>
+      </section>
     </section>
 
   </main>
