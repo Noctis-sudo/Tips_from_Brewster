@@ -10,6 +10,7 @@ import Vpn from '../pages/vpn.vue'
 import VpnOpen from '../pages/vpn-openvpn.vue'
 import internetProblem from '../pages/internetProblem.vue'
 import notfound from '../pages/404.vue'
+import Vpnregion from '@/pages/vpnregion.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,7 +33,10 @@ const router = createRouter({
     { path: '/iphone/appleid/region', name: 'Region', component: Region },
     { path: '/iphone/appleid/changeregion', name: 'changeregion', component: Changeregion },
 
-    { path: '/windows/vpn/openvpn', name: 'VpnOpen', component: VpnOpen },
+    { path: '/windows/vpn/openvpn', name: 'VpnOpen', component: VpnOpen, props: { device: 'Windows'} },
+    { path: '/iphone/vpn/openvpn', name: 'iphonevpnopen', component: VpnOpen, props: { device:'iPhone'} },
+
+    { path: '/iphone/vpn/vpnregion', name: 'vpnregion', component: Vpnregion, props: { device:'iPhone'} },
 
     { path: '/problem/webnaaccess', name: 'webProblem', component: internetProblem, props: {type: 'web'} },
     { path: '/problem/internetnaaccess', name: 'internetProblem', component: internetProblem, props: {type: 'internet'} },

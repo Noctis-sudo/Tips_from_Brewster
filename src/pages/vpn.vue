@@ -7,7 +7,14 @@
 
     <section v-if="device == 'iPhone'">
       <div class="article-card">
-        <h2>頁面尚未完成，請先參考Windows頁VPN</h2>
+        <RouterLink to="/iphone/vpn/openvpn" class="article-link">
+          如何打开VPN
+        </RouterLink>
+      </div>
+      <div class="article-card">
+        <RouterLink to="/iphone/vpn/vpnregion" class="article-link">
+          如何切换VPN节点（地区）
+        </RouterLink>
       </div>
     </section>
 

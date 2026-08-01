@@ -4,37 +4,59 @@
 
     <h1>如何打开 VPN</h1>
 
-    <section class="step-card">
-      <h2>1.</h2>
-        <img src="/resources/iPhone/VPN.png" alt="VPN" />
-      <p>双击打开桌面上的VPN图标</p>
+    <section v-if="deivce=='Windows'">
+      <section class="step-card">
+        <h2>1.</h2>
+          <img src="/resources/iPhone/VPN.png" alt="VPN" />
+        <p>双击打开桌面上的VPN图标</p>
+      </section>
+
+      <section class="step-card">
+        <h2>2.</h2>
+          <img src="/resources/Windows/vpn/1.png" alt="choice" />
+        <p>选择套餐和目标位置（如图）</p>
+        <p>点击红框位置打开VPN</p>
+        <p>台湾地区可以访问大部分网站（香港略有限制）</p>
+        <p style="color: red;">部分政府网站与银行需要当地IP，更改绿框中的目标位置</p>
+      </section>
+
+      <section class="step-card">
+        <h2>3.</h2>
+          <img src="/resources/Windows/vpn/2.png" alt="where?" />
+        <p>打开后软件自动进入系统托盘 单击打开</p>
+        <p style="color: red;">⚠️使用完成后请一定打开托盘关闭VPN后再关闭软件</p>
+      </section>
+
+      <section class="step-card">
+        <h2>详见下方视频</h2>
+          <video class="responsive-video" src="/resources/problem/1.mp4" controls playsinline preload="metadata" />
+      </section>
+
+      <section class="step-card">
+          <RouterLink to="/problem/webnaaccess" class="category-card">
+            VPN常见问题请点这里
+          </RouterLink>
+      </section>
     </section>
 
-    <section class="step-card">
-      <h2>2.</h2>
-        <img src="/resources/Windows/vpn/1.png" alt="choice" />
-      <p>选择套餐和目标位置（如图）</p>
-      <p>点击红框位置打开VPN</p>
-      <p>台湾地区可以访问大部分网站（香港略有限制）</p>
-      <p style="color: red;">部分政府网站与银行需要当地IP，更改绿框中的目标位置</p>
-    </section>
+    <section v-if="device == iPhone">
+      <section class="step-card">
+        <h2>1.</h2>
+          <img src="/resources/iPhone/vpn/3.png" alt="icon" />
+        <p>点击图标打开代理软件并登录</p>
+      </section>
 
-    <section class="step-card">
-      <h2>3.</h2>
-        <img src="/resources/Windows/vpn/2.png" alt="where?" />
-      <p>打开后软件自动进入系统托盘 单击打开</p>
-      <p style="color: red;">⚠️使用完成后请一定打开托盘关闭VPN后再关闭软件</p>
-    </section>
-
-    <section class="step-card">
-      <h2>详见下方视频</h2>
-        <video class="responsive-video" src="/resources/problem/1.mp4" controls playsinline preload="metadata" />
-    </section>
-
-    <section class="step-card">
-        <RouterLink to="/problem/webnaaccess" class="category-card">
-          VPN常见问题请点这里
+      <section class="step-card">
+        <h2>2. 选择节点</h2>
+        <RouterLink to="/iphone/vpn/vpnregion" class="category-card">
+          详见此处
         </RouterLink>
+      </section>
+
+      <section class="step-card">
+        <h2>3. 点击打开</h2>
+        <img src="/resources/iPhone/vpn/1.png" alt="open" />
+      </section>
     </section>
 
   </main>
@@ -90,14 +112,6 @@ p {
   line-height: 1.8;
 }
 
-@media (max-width: 800px) {
-  .page {
-    padding: 36px 20px;
-  }
-  .topics {
-    grid-template-columns: 1fr;
-  }
-}
 .category-card {
   height: 220px;
   border: none;
@@ -124,5 +138,14 @@ p {
   margin: 12px 0 0 0;
   border-radius: 12px;
   background: #000;
+}
+
+.step-card img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  margin: 12px 0 0 0;
+  border-radius: 12px;
 }
 </style>

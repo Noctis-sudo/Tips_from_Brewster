@@ -2,21 +2,13 @@
   <main class="page">
     <button type="button" class="back" @click="goBack">← 返回</button>
 
-    <h1>如何切换Apple ID地区</h1>
+    <h1>如何切换VPN节点（地区）</h1>
 
     <section class="step-card">
-      <h2>1. 登出现有的Apple ID</h2>
-      <img src="/resources/iPhone/appleid/appleid-region1.png" alt="region1" />
-      <p>随后根据弹出窗口点击 登出</p>
-    </section>
-
-    <section class="step-card">
-      <h2>2. 登入对应地区的Apple ID</h2>
-          <img src="/resources/iPhone/appleid/appleid-changeregion1.png" alt="region1" />
-    </section>
-
-    <section class="step-card">
-      <h2>密码详见密码纸</h2>
+      <h2>1. 点击此处切换节点</h2>
+      <img src="/resources/iPhone/vpn/2.png" alt="region" />
+      <p>⚠️香港地区不支持使用ChatGPT</p>
+      <p>节点距离越近速度越快，优选台湾</p>
     </section>
 
   </main>
