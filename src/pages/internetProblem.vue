@@ -2,17 +2,31 @@
   <main class="page">
     <button type="button" class="back" @click="goBack">← 返回</button>
 
-    <h1>提示无法访问此网站</h1>
+    <section v-if="props.type === 'web'">
+      <h1>提示无法访问此网站</h1>
 
-    <section class="step-card">
-        <img src="/resources/problem/1.png" alt="Problem" />
-      <p>浏览器中提示该报错</p>
-    </section>
+      <section class="step-card">
+          <img src="/resources/problem/1.png" alt="Problem" />
+        <p>浏览器中提示该报错</p>
+      </section>
 
-    <section class="step-card">
+      <section class="step-card">
+        <h2>原因1：没有正确打开VPN</h2>
+        <h2>详见下方视频</h2>
+      </section>
+
+      <section class="step-card">
+        <h2>原因2：上次关闭电脑未正常关闭VPN</h2>
         <h2>打开VPN软件后打开然后关闭梯子</h2>
         <h2>详见下方视频</h2>
         <video class="responsive-video" src="/resources/problem/1.mp4" controls playsinline preload="metadata" />
+      </section>
+    </section>
+
+    <section v-else-if="props.type === 'internet'">
+      <h1>提示无法访问Internet</h1>
+      <h2>你没有连接以太网（插网线）或个人热点</h2>
+      <h2>Wi-Fi无法被该台式机连接</h2>
     </section>
 
   </main>
@@ -20,6 +34,14 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+
+const props = defineProps({
+  type: {
+    type: String,
+    default: 'web'
+  }
+})
+
 const router = useRouter()
 const goBack = () => router.back()
 </script>

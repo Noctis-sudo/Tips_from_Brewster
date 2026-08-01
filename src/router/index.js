@@ -9,6 +9,7 @@ import Device from '../pages/Device.vue'
 import Vpn from '../pages/vpn.vue'
 import VpnOpen from '../pages/vpn-openvpn.vue'
 import internetProblem from '../pages/internetProblem.vue'
+import notfound from '../pages/404.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,10 +34,11 @@ const router = createRouter({
 
     { path: '/windows/vpn/openvpn', name: 'VpnOpen', component: VpnOpen },
 
-    { path: '/problem/webnaaccess', name: 'internetProblem', component: internetProblem },
+    { path: '/problem/webnaaccess', name: 'webProblem', component: internetProblem, props: {type: 'web'} },
+    { path: '/problem/internetnaaccess', name: 'internetProblem', component: internetProblem, props: {type: 'internet'} },
 
     // catch-all 404 route
-    { path: '/:pathMatch(.*)*', name: 'NotFound', component: Home }
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: notfound }
   ]
 })
 

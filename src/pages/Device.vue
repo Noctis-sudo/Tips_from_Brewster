@@ -61,6 +61,9 @@
         <RouterLink to="/problem/webnaaccess" class="article-card">
           <p>浏览器提示无法访问此网站</p>
         </RouterLink>
+        <RouterLink to="/problem/internetnaaccess" class="article-card">
+          <p>浏览器提示无法访问Internet</p>
+        </RouterLink>
 
       </div>
     </section>
