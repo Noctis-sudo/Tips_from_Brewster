@@ -4,7 +4,7 @@
 
     <h1>如何打开 VPN</h1>
 
-    <section v-if="deivce=='Windows'">
+    <section v-if="device === 'Windows'">
       <section class="step-card">
         <h2>1.</h2>
           <img src="/resources/iPhone/VPN.png" alt="VPN" />
@@ -39,7 +39,7 @@
       </section>
     </section>
 
-    <section v-if="device == iPhone">
+    <section v-else-if="device === 'iPhone'">
       <section class="step-card">
         <h2>1.</h2>
           <img src="/resources/iPhone/vpn/3.png" alt="icon" />
@@ -64,6 +64,13 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+import { computed } from 'vue'
+
+const props = defineProps({
+  device: { type: String, default: '' }
+})
+
+const device = computed(() => props.device)
 const router = useRouter()
 const goBack = () => router.back()
 </script>

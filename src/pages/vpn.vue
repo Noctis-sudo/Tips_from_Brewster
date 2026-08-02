@@ -5,6 +5,14 @@
     <h1>VPN</h1>
     <h2>VPN 使用帮助</h2>
 
+    <section v-if="device=='Windows'">
+      <div class="article-card">
+        <RouterLink to="/windows/vpn/openvpn" class="article-link">
+          如何打开 VPN
+        </RouterLink>
+      </div>
+    </section>
+
     <section v-if="device == 'iPhone'">
       <div class="article-card">
         <RouterLink to="/iphone/vpn/openvpn" class="article-link">
@@ -18,18 +26,10 @@
       </div>
     </section>
 
-    <section v-if="device=='Windows'">
-      <div class="article-card">
-        <RouterLink to="/windows/vpn/openvpn" class="article-link">
-          如何打开 VPN
-        </RouterLink>
-      </div>
-    </section>
-
     <section v-if="device=='Mac'">
-    <div class="article-card">
-        <h2>頁面尚未完成，請先參考Windows頁VPN</h2>
-    </div>
+      <div class="article-card">
+          <h2>頁面尚未完成，請先參考其他頁面</h2>
+      </div>
     </section>
 
   </main>

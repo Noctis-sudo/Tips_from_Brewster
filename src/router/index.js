@@ -34,8 +34,8 @@ const router = createRouter({
     { path: '/iphone/appleid/region', name: 'Region', component: Region },
     { path: '/iphone/appleid/changeregion', name: 'changeregion', component: Changeregion },
 
-    { path: '/windows/vpn/openvpn', name: 'VpnOpen', component: VpnOpen, props: { device: 'Windows'} },
-    { path: '/iphone/vpn/openvpn', name: 'iphonevpnopen', component: VpnOpen, props: { device:'iPhone'} },
+    { path: '/windows/vpn/openvpn', name: 'VpnOpenWindows', component: VpnOpen, props: { device: 'Windows' } },
+    { path: '/iphone/vpn/openvpn', name: 'VpnOpenIphone', component: VpnOpen, props: { device: 'iPhone' } },
 
     { path: '/iphone/vpn/vpnregion', name: 'vpnregion', component: Vpnregion, props: { device:'iPhone'} },
     { path: '/problem/gpt', name: 'chatgpt', component: chatgptaccess},
