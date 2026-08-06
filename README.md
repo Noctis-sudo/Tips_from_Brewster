@@ -37,7 +37,8 @@ npm run dev
 npm run build
 ```
 
-
+Please email Brewster if problem shown.
+gulubao01@gmail.com
 
 Tips from Brewster
 
