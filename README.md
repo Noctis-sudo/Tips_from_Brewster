@@ -40,6 +40,8 @@ npm run build
 Please email Brewster if problem shown.
 gulubao01@gmail.com
 
+### Copyright
+
 Tips from Brewster
 
 Copyright © 2026 Brewster.
@@ -47,6 +49,12 @@ Copyright © 2026 Brewster.
 This project is created and maintained by Brewster.
 
 All rights reserved.
+
+No part of this project may be copied, modified,
+
+distributed, or used for commercial purposes
+
+without prior written permission from the author.
 
 Apple, iPhone, Mac, macOS and other trademarks are the property of Apple Inc.
 
