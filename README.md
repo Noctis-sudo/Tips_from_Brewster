@@ -36,3 +36,17 @@ npm run dev
 ```sh
 npm run build
 ```
+
+
+
+Tips from Brewster
+
+Copyright © 2026 Brewster.
+
+This project is created and maintained by Brewster.
+
+All rights reserved.
+
+Apple, iPhone, Mac, macOS and other trademarks are the property of Apple Inc.
+
+This is an independent project and is not affiliated with, endorsed by, or sponsored by Apple Inc.
