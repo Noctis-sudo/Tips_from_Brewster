@@ -36,3 +36,22 @@ npm run dev
 ```sh
 npm run build
 ```
+
+Please email Brewster if problem shown.
+gulubao01@gmail.com
+
+### Copyright
+
+Tips from Brewster
+
+Copyright © 2026 Brewster-sudo.
+
+This project is created and maintained by Brewster-sudo.
+
+All rights reserved.
+
+No part of this project may be copied, modified, distributed, or used for commercial purposes without prior written permission from the author.
+
+Apple, iPhone, Mac, macOS and other trademarks are the property of Apple Inc.
+
+This is an independent project and is not affiliated with, endorsed by, or sponsored by Apple Inc.
