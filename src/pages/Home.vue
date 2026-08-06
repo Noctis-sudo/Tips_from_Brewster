@@ -24,6 +24,10 @@
         <span>常见问题</span>
       </RouterLink>
 
+      <h2 class="copyright">Please email to Brewster if problem shown: gulubao01@gmail.com</h2>
+      <h2 class="copyright">Copyright © 2026 Brewster-sudo.</h2>
+      <h2 class="copyright">All rights reserved.</h2>
+
     </div>
   </main>
 </template>
@@ -38,6 +42,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+h2 {
+  margin-top: 18px;
+  margin-bottom: 5px;
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
 }
 
 h1 {
@@ -102,5 +112,11 @@ h1 {
   .home-page {
     padding: 40px 20px;
   }
+}
+
+h2.copyright {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 8px;
 }
 </style>
