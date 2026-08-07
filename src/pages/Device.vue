@@ -26,6 +26,13 @@
           <p>App Store</p>
         </RouterLink>
 
+        <RouterLink to="/iphone/applepay" class="topic-card">
+          <div class="topic-icon">
+            <img src="/resources/iPhone/nfc/applepay.png" alt="Apple Pay" />
+          </div>
+          <p>Apple Pay</p>
+        </RouterLink>
+
       </div>
     </section>
 

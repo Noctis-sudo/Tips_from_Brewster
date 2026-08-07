@@ -12,6 +12,8 @@ import internetProblem from '../pages/internetProblem.vue'
 import notfound from '../pages/404.vue'
 import Vpnregion from '@/pages/vpnregion.vue'
 import chatgptaccess from '@/pages/chatgptaccess.vue'
+import ApplePay from '@/pages/ApplePay.vue'
+import applepaypage from '@/pages/applepaypage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +35,11 @@ const router = createRouter({
     { path: '/iphone/appleid', name: 'AppleID', component: AppleID },
     { path: '/iphone/appleid/region', name: 'Region', component: Region },
     { path: '/iphone/appleid/changeregion', name: 'changeregion', component: Changeregion },
+
+    { path: '/iphone/applepay', name: 'ApplePay', component: ApplePay },
+    { path: '/iphone/applepay/card', name: 'applepaycard', component: applepaypage, props: { kind: 'card' } },
+    { path: '/iphone/applepay/where', name: 'applepaywhere', component: applepaypage, props: { kind: 'where' } },
+  
 
     { path: '/windows/vpn/openvpn', name: 'VpnOpenWindows', component: VpnOpen, props: { device: 'Windows' } },
     { path: '/iphone/vpn/openvpn', name: 'VpnOpenIphone', component: VpnOpen, props: { device: 'iPhone' } },
