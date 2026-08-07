@@ -48,7 +48,7 @@
             <section class="step-card">
                 <p>可以在任何有八达通标识的位置使用八达通</p>
                 <p>你可以将现有八达通卡片添加至iPhone或为其增值</p>
-                <a href="https://support.apple.com/zh-cn/guide/iphone/iphc90580097/26/ios/26" target="_blank" rel="noopener noreferrer" class="article-card">
+                <a href="https://www.apple.com/hk/apple-pay/octopus/" target="_blank" rel="noopener noreferrer" class="article-card">
                 <p>详见此处，请往下翻阅来观看视频</p>
                 </a>
             </section>
