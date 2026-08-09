@@ -51,6 +51,16 @@
 
     <section v-if="device == 'Windows'">
       <h2>Windows 帮助</h2>
+      <section class="article-card browser-warning">
+        <div class="browser-row">
+          <span>⚠️为确保隐私安全，使用Windows电脑时不要使用Microsoft Edge➡️</span>
+          <img src="/resources/Windows/edge.avif" alt="Microsoft Edge" />
+        </div>
+        <div class="browser-row">
+          <span>，请使用Google Chrome➡️</span>
+          <img src="/resources/Windows/chrome.svg" alt="Google Chrome" />
+        </div>
+      </section>
       <div class="topics">
         <RouterLink to="/windows/vpn" class="topic-card">
           <div class="topic-icon">
@@ -227,4 +237,26 @@ h2 {
   text-align: center;
 }
 
+  .browser-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .browser-row span {
+    font-size: 0.98rem;
+    color: #333;
+    flex: 1;
+  }
+
+  .browser-row img {
+    max-width: 80px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
 </style>
