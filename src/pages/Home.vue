@@ -25,7 +25,7 @@
       </RouterLink>
 
       <h2 class="copyright">Please email to Brewster if problem shown: gulubao01@gmail.com</h2>
-      <h2 class="copyright">Copyright © 2026 Brewster-sudo.</h2>
+      <h2 class="copyright">Copyright © 2026 Gulubao.</h2>
       <h2 class="copyright">All rights reserved.</h2>
 
     </div>
